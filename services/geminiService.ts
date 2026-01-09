@@ -10,7 +10,7 @@ export const analyzeImageForMetadata = async (
   originalMimeType: string
 ): Promise<AIAnalysisResult> => {
   try {
-    const model = 'gemini-2.5-flash-latest'; // Efficient model for multimodal tasks
+    const model = 'gemini-3-flash-preview'; // Efficient model for multimodal tasks
 
     const prompt = `
       Analyze this image. 
