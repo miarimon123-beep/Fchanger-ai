@@ -2,8 +2,8 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { AIAnalysisResult } from "../types";
 
 // Initialize Gemini Client
-// IMPORTANT: process.env.API_KEY is automatically injected.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// IMPORTANT: process.env.API_KEY || 'FAKE_API_KEY_FOR_DEVELOPMENT' is automatically injected.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || 'FAKE_API_KEY_FOR_DEVELOPMENT' });
 
 export const analyzeImageForMetadata = async (
   base64Data: string,
